@@ -6,8 +6,13 @@
   text-decoration: none;
 }
 
+html,
+body {
+  font-family: Livvic;
+}
+
 :root {
-  --midnight-green: #002529;
+  --midnight-green: #014e56;
   --light-coral: #f67e7e;
   --white: #ffffff;
   --rapture-blue: #79c8c7;
@@ -15,4 +20,162 @@
   --deep-jungle-green: #004047;
   --sacramento-state-green: #012f34;
   --dark-green: #002529;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  background-color: black;
+}
+
+/* From Uiverse.io by sabbircoder07 */
+.progress {
+  background-color: #ffffff;
+  width: 220px;
+  height: 20px;
+  border-radius: 100px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.inner {
+  background-image: linear-gradient(
+    to left,
+    #00cdac,
+    #00c2c9,
+    #00b4e3,
+    #00a2f1,
+    #008cef,
+    #0088eb,
+    #0085e6,
+    #0081e2,
+    #0090de,
+    #009bd2,
+    #00a3c1,
+    #02aab0
+  );
+  height: 100%;
+  transform-origin: left;
+  animation: progress 2s infinite;
+}
+
+@keyframes progress {
+  0% {
+    transform: scaleX(10%) translateX(-10%);
+  }
+
+  100% {
+    transform: scaleX(80%) translateX(150%);
+  }
+}
+
+.container {
+  max-width: 1142px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  background-color: var(--midnight-green);
+  .nav {
+    padding: 77px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-menus {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .nav-item {
+          .nav-link {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            color: var(--white);
+          }
+        }
+      }
+    }
+    .nav-btn {
+      color: var(--white);
+      background: none;
+      border: 2px solid var(--white);
+      border-radius: 24px;
+      padding: 9px 33px 11px 32px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0px;
+    }
+  }
+}
+
+.sectionone {
+  background-color: var(--midnight-green);
+  padding: 129px 0 250px;
+  .find-div-img-left {
+    .find-img-left {
+      position: relative;
+      top: 250px;
+      right: 0;
+    }
+  }
+  .find {
+    display: flex;
+    align-items: center;
+    .find-title {
+      max-width: 600px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 100px;
+      letter-spacing: 0px;
+
+      span {
+        color: var(--light-coral);
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 100px;
+        letter-spacing: 0px;
+      }
+    }
+    .find-desc {
+      display: flex;
+      flex-direction: column;
+      gap: 79px;
+
+      .find-rectangle-div {
+        text-align: left;
+      }
+
+      .find-text {
+        max-width: 445px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: var(--white);
+      }
+    }
+  }
+  .find-div-img-bottom {
+    position: relative;
+    top: 254px;
+    left: 917px;
+  }
 }

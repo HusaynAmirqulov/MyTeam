@@ -7,6 +7,7 @@
 }
 
 :root {
+  --nav: #014e56;
   --midnight-green: #002529;
   --light-coral: #f67e7e;
   --white: #ffffff;
@@ -15,4 +16,121 @@
   --deep-jungle-green: #004047;
   --sacramento-state-green: #012f34;
   --dark-green: #002529;
+}
+
+.section {
+  background-color: var(--nav);
+  padding: 120px 0;
+
+  .contact-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .contact-desc {
+      .contact-title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100px;
+        letter-spacing: 0px;
+        color: var(--white);
+      }
+
+      .contact-ask {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+        letter-spacing: 0px;
+        color: var(--light-coral);
+      }
+
+      .qualities {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .qualiti {
+          margin-top: 32px;
+          display: flex;
+          align-items: center;
+          gap: 23px;
+
+          .qualiti-desc {
+            .qualiti-title {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 28px;
+              letter-spacing: 0px;
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+
+    .contact-forma {
+      .contact-form {
+        max-width: 542px;
+
+        .contact-inp {
+          padding: 0 81px 17px 14px;
+          width: 100%;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 25px;
+          letter-spacing: -0.12px;
+          background: none;
+          outline: none;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          border-bottom: 2px solid var(--white);
+        }
+        .contact-inp:nth-child(2) {
+          padding: 24px 81px 17px 14px;
+        }
+        .contact-inp:nth-child(3) {
+          padding: 24px 81px 17px 14px;
+        }
+        .contact-inp:nth-child(4) {
+          padding: 24px 81px 17px 14px;
+        }
+        .contact-inp:nth-child(5) {
+          padding: 24px 81px 58px 14px;
+        }
+
+        .contact-btn {
+          cursor: pointer;
+          margin-top: 24px;
+          padding: 9px 32px 11px;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0px;
+          color: var(--deep-jungle-green);
+          background-color: var(--white);
+          border: none;
+          border-radius: 24px;
+          transition: 1s;
+        }
+        .contact-btn:hover {
+          color: var(--white);
+          background-color: var(--deep-jungle-green);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 362px) {
+  .qualiti{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1035px) {
+  .contact-div {
+    flex-direction: column;
+    gap: 80px;
+  }
 }

@@ -16,56 +16,220 @@
     />
   </head>
   <body>
-    <div id="loading">
-      <div class="progress">
-        <div class="inner"></div>
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-animation">
+        <div class="loading-ring"></div>
+        <div class="loading-ring"></div>
+        <div class="loading-ring"></div>
+      </div>
+      <div class="loading-progress">
+        <div class="loading-progress-bar"></div>
       </div>
     </div>
-    <header id="header" class="header">
-      <div class="container">
-        <nav class="nav">
-          <div class="nav-menus">
-            <div class="nav-brand">
-              <img src="./images/myteam.svg" alt="" class="logo" />
+
+    <div class="main-content" id="mainContent">
+      <header id="header" class="header">
+        <div class="container">
+          <nav class="nav">
+            <div class="nav-menus">
+              <div class="nav-brand">
+                <img src="./images/myteam.svg" alt="" />
+              </div>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">about</a>
+                </li>
+              </ul>
             </div>
-            <ul class="nav-menu">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">home</a>
-              </li>
-              <li class="nav-item">
-                <a href="./pages/about.html" class="nav-link">about</a>
-              </li>
-            </ul>
-          </div>
-          <a href="./pages/contact.html">
             <button class="nav-btn">contact us</button>
-          </a>
-        </nav>
-      </div>
-    </header>
-    <section id="sectionone" class="sectionone">
-      <div class="find-div-img-left">
-        <img src="./images/disk-left.svg" alt="" class="find-img-left" />
-      </div>
-      <div class="container">
-        <div class="find">
-          <h1 class="find-title">Find the best <span>talent</span></h1>
-          <div class="find-desc">
-            <div class="find-rectangle-div">
-              <img src="./images/Rectangle.svg" alt="" class="find-rectangle" />
+          </nav>
+        </div>
+      </header>
+
+      <section id="sectionone" class="sectionone">
+        <div class="find-div-img-left">
+          <img src="./images/disk-left.svg" alt="" />
+        </div>
+
+        <div class="container">
+          <div class="find">
+            <h1 class="find-title">Find the best <span>talent</span></h1>
+            <div class="find-desc">
+              <div class="find-rectangle-div">
+                <div
+                  style="
+                    width: 50px;
+                    height: 4px;
+                    background: var(--rapture-blue);
+                  "
+                ></div>
+              </div>
+              <p class="find-text">
+                Finding the right people and building high performing teams can
+                be hard. Most companies aren't tapping into the abundance of
+                global talent. We're about to change that.
+              </p>
             </div>
-            <p class="find-text">
-              Finding the right people and building high performing teams can be
-              hard. Most companies aren’t tapping into the abundance of global
-              talent. We’re about to change that.
-            </p>
+          </div>
+        </div>
+
+        <div class="find-div-img-bottom">
+          <img src="./images/disk-bottom.svg" alt="" />
+        </div>
+      </section>
+    </div>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Build & manage distributed teams like no one else.
+          </h1>
+
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">
+                <img
+                  src="./images/icon-experienced.svg"
+                  alt="Experienced Individuals"
+                />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Experienced Individuals</h3>
+                <p class="feature-text">
+                  Our network is made up of highly experienced professionals who
+                  are passionate about what they do.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">
+                <img src="./images/icon-gear.svg" alt="Easy to Implement" />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Easy to Implement</h3>
+                <p class="feature-text">
+                  Our processes have been refined over years of implementation
+                  meaning our teams always deliver.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">
+                <img src="./images/icon-stat.svg" alt="Enhanced Productivity" />
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Enhanced Productivity</h3>
+                <p class="feature-text">
+                  Our customized platform with in-built analytics helps you
+                  manage your distributed teams.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="find-div-img-bottom">
-        <img src="./images/disk-bottom.svg" alt="" class="find-img-bottom" />
-      </div>
+      <div class="hero-pattern hero-pattern-bottom-left"></div>
     </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">
+          Delivering real results for top companies. Some of our
+          <span class="highlight">success stories.</span>
+        </h2>
+
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "The team perfectly fit the specialized skill set required. They
+              focused on the most essential features helping us launch the
+              platform eight months faster than planned."
+            </p>
+            <h4 class="testimonial-name">Kady Baker</h4>
+            <p class="testimonial-position">Product Manager at Bookmark</p>
+            <div class="testimonial-avatar">
+              <img src="./images/user-kady.svg" alt="Kady Baker" />
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "We needed to automate our entire onboarding process. The team
+              came in and built a whole journey. Since going live, user
+              retention has gone through the roof!"
+            </p>
+            <h4 class="testimonial-name">Aiysha Reese</h4>
+            <p class="testimonial-position">Founder of Manage</p>
+            <div class="testimonial-avatar">
+              <img src="./images/user-aiysha.svg" alt="Aiysha Reese" />
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "Amazing. Our team helped us build an app that delivered a new
+              experience for hiring a physio. The launch was an instant success
+              with 100k downloads in the first month."
+            </p>
+            <h4 class="testimonial-name">Arthur Clarke</h4>
+            <p class="testimonial-position">Co-founder of MyPhysio</p>
+            <div class="testimonial-avatar">
+              <img src="./images/user-arthur.svg" alt="Arthur Clarke" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-pattern testimonials-pattern-top-left"></div>
+      <div class="testimonials-pattern testimonials-pattern-bottom-right"></div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <h2 class="cta-title">Ready to get started?</h2>
+        <a href="#" class="btn btn-secondary">contact us</a>
+      </div>
+      <div class="cta-pattern cta-pattern-top-left"></div>
+      <div class="cta-pattern cta-pattern-bottom-right"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="./images/myteam.svg" alt="" />
+            <ul class="footer-nav">
+              <li><a href="#">home</a></li>
+              <li><a href="#">about</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-address">
+            <p>987 Hillcrest Lane</p>
+            <p>Irvine, CA</p>
+            <p>California 92714</p>
+            <p>Call Us: 949-833-7432</p>
+          </div>
+
+          <div class="footer-social">
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">Copyright 2023. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>

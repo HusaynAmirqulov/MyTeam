@@ -1,32 +1,46 @@
+let modeToggle = document.querySelector(".switch");
+let body = document.querySelector("body");
+
 window.addEventListener("load", function () {
   const loadingScreen = document.getElementById("loadingScreen");
   const mainContent = document.getElementById("mainContent");
 
-  // 3 sekunddan keyin loading screen ni yashirish
   setTimeout(function () {
     loadingScreen.classList.add("fade-out");
 
-    // Loading screen yo'qolgandan keyin main content ni ko'rsatish
     setTimeout(function () {
       loadingScreen.style.display = "none";
       mainContent.classList.add("show");
-    }, 800); // fade-out animatsiyasi tugashini kutish
-  }, 3000); // 3 sekund
+    }, 800);
+  }, 3000);
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    // Add your navigation logic here
+window.addEventListener("scroll", function () {
+  toggleBacktop();
+});
+
+let backtop = document.querySelector(".backtop");
+
+function toggleBacktop() {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    backtop.classList.add("backtop-show");
+  } else {
+    backtop.classList.remove("backtop-show");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector("#hamburger");
+  const navMenu = document.querySelector(".nav-menus");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
   });
 });
 
-// Button hover effects
-document.querySelector(".nav-btn").addEventListener("mouseenter", function () {
-  this.style.transform = "translateY(-2px)";
-});
-
-document.querySelector(".nav-btn").addEventListener("mouseleave", function () {
-  this.style.transform = "translateY(0)";
+modeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
 });

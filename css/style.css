@@ -10,6 +10,7 @@ html,
 body {
   font-family: "Livvic", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -22,6 +23,40 @@ body {
   --deep-jungle-green: #004047;
   --sacramento-state-green: #012f34;
   --dark-green: #002529;
+}
+
+body.dark {
+  --nav: #002529;
+  --midnight-green: #014e56;
+  --deep-jungle-green: #002529;
+  --dark-green: #014e56;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  border-radius: 25px;
+  background-color: var(--white);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--dark-green);
+  transition: 0.5s;
+}
+
+/* dark-mode */
+body.dark .switch::before {
+  left: 20px;
 }
 
 .container {
@@ -113,6 +148,10 @@ body {
 
 .header {
   background-color: var(--nav);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
 }
 
 .nav {
@@ -122,10 +161,22 @@ body {
   justify-content: space-between;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav-menus {
   display: flex;
   align-items: center;
   gap: 80px;
+}
+
+#hamburger {
+  color: #ffffff;
+  font-size: 25px;
+  display: none;
 }
 
 .nav-menu {
@@ -236,8 +287,8 @@ body {
 }
 
 .sectionone {
-  background-color: var(--midnight-green);
-  padding: 129px 0 250px;
+  background-color: var(--nav);
+  padding: 229px 0 250px;
   position: relative;
   overflow: hidden;
 }
@@ -605,6 +656,31 @@ body {
   font-size: 14px;
 }
 
+.backtop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--dark-green);
+  font-size: 25px;
+  color: var(--white);
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  box-shadow: 0px 0px 33px 5px var(--nav);
+  /* display: none; */
+  opacity: 0;
+  z-index: -99;
+  transition: 1s;
+}
+
+.backtop-show {
+  opacity: 1;
+  z-index: 99;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -686,11 +762,22 @@ body {
   .nav-menus {
     gap: 40px;
   }
+  .nav-brand {
+    width: 100%;
+    padding: 20px 0;
+  }
+  #hamburger {
+    display: block;
+  }
   .nav-menu {
+    display: none;
     gap: 24px;
   }
   .nav-btn {
     display: none;
+  }
+  .active {
+    display: flex;
   }
   .mobile-menu-btn {
     display: block;
